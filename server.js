@@ -335,7 +335,7 @@ app.post('/send-verification-email', async (req, res) => {
         user.tokenExpiresAt = tokenExpiration;
         await user.save();
 
-        const verificationLink = `http://localhost:5000/verify-email?token=${verificationToken}`;
+        const verificationLink = `https://server-tigx.onrender.com/verify-email?token=${verificationToken}`;
         const mailOptions = {
             from: 'support@apex-cart.com',
             to: email,
